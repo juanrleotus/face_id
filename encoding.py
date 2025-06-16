@@ -1,5 +1,6 @@
 import cv2
 import face_recognition
+import sys
 import os
 
 def register_face(name):
