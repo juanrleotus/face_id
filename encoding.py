@@ -48,10 +48,8 @@ def register_face(name):
         print("[WARN] Registro incompleto. Algunas imágenes no fueron tomadas.")
 
 if __name__ == "__main__":
-    name = input("Ingrese nombre de usuario: ").strip()
-    if name:
-        register_face(name)
+    if len(sys.argv) < 2:
+        print("Uso: python encoding.py <nombre>")
     else:
-        print("[ERROR] Nombre no válido.")
-
-
+        name = sys.argv[1]
+        register_face(name)
